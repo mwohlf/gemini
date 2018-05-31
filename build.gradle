@@ -1,0 +1,18 @@
+
+// just the base plugin with the basics to keep things simple,
+// see: http://mrhaki.blogspot.de/2010/10/gradle-goodness-base-plugin-usage.html
+apply plugin: 'base'
+
+// reading common libs and versions
+apply from: "${projectDir}/gradle/dependencies.gradle"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.7'
+}
+
+task MrProper {
+    dependsOn clean
+    doLast {
+        delete "./.gradle"
+    }
+}

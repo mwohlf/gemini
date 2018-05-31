@@ -1,0 +1,16 @@
+rootProject.name = 'gemini'
+
+// submodules
+include 'frontend'
+include 'backend'
+
+// check for proper modules configs
+rootProject.children.each {project ->
+
+    project.projectDir = new File(settingsDir, project.name)
+    assert project.projectDir.isDirectory(), "directory missing for sub project '" + project + "'"
+
+    project.buildFileName = "${project.name}.gradle"
+    assert project.buildFile.isFile(), "gradle file not found for sub project " + project + ", expected filename is '" + project.buildFileName + "'"
+
+}
