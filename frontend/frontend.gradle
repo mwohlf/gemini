@@ -51,8 +51,10 @@ task webjar(type: Jar) {
     description "assemble the maven artifact"
 
     dependsOn yarnRunBuild
-    // default is to build into /dist however we want it gradle style and changed the path in
-    from(fileTree("build/dist"))
+    // default is to build into /dist however we want it gradle style and changed the path in angular.json
+    from(fileTree("build/dist")) {
+        into "META-INF/resources"
+    }
 }
 build.dependsOn(webjar)
 build.dependsOn(publishToMavenLocal)
@@ -72,10 +74,10 @@ publishing {
 }
 
 task MrProper {
-    dependsOn clean
+    dependsOn clean // removed build/
     doLast {
         delete "${projectDir}/src/generated"
-        delete "${projectDir}/dist"
+        delete "${projectDir}/dist"  // moved to build/dist in angular.json
         delete "${projectDir}/.gradle"
         delete "${projectDir}/node_modules"
     }

@@ -39,3 +39,11 @@ dependencies {
 
     testCompile("junit:junit")
 }
+
+task MrProper {
+    dependsOn clean // removed build/
+    doLast {
+        delete "${projectDir}/out"  // from idea
+        delete "${projectDir}/.gradle"
+    }
+}
