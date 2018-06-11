@@ -1,0 +1,8 @@
+
+# gradle wrapper
+.gradle
+
+# frontend bulid stuff
+frontend/.gradle
+frontend/build
+frontend/node_modules

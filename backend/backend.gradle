@@ -29,6 +29,9 @@ bootJar {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+// make sure the frontend is compiled and in mavenLocal
+compileJava.dependsOn(':frontend:publishWebJarPublicationToMavenLocal')
+
 dependencies {
     compile('net.wohlfart.gemini:frontend:0.0.1-SNAPSHOT')        // the frontend webjar
 

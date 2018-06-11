@@ -8,7 +8,7 @@ spring:
   application:
     name: gemini
   datasource:
-    url: jdbc:h2:file:/tmp/test
+    url: jdbc:h2:file:${java.io.tmpdir}/test
     username: sa
     password: sa
     driver-class-name: org.h2.Driver
