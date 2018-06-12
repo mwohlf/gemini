@@ -1,18 +1,8 @@
 
-html, body, app-root {
+html, body {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     font-family: Calibri, Arial, sans-serif;
-}
-
-app-root {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: auto;
-    background-color: #ccc;
 }

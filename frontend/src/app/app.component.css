@@ -1,8 +1,23 @@
 
-footer {
-    height: 25px;
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     height: 75px;
+    order: 1;
+    flex-grow: 0;
+}
+
+main {
+    order: 2;
+    flex-grow: 1;
+}
+
+footer {
+    height: 25px;
+    order: 3;
+    flex-grow: 0;
 }

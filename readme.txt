@@ -8,3 +8,4 @@ yarn add vivid-icons
 
 ng generate component decorator/header --module=app.module
 ng generate component decorator/footer --module=app.module
+ng generate component pages/start --module=app.module
