@@ -10,6 +10,10 @@ import {Routing} from './routing';
 import { StartComponent } from './pages/start/start.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import {
+    MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatSidenavModule,
+    MatToolbarModule
+} from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -23,7 +27,13 @@ import { HomeComponent } from './pages/home/home.component';
     imports: [
         BrowserModule,
         Routing,
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatCardModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
