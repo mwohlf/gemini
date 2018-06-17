@@ -21,7 +21,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         FooterComponent,
         StartComponent,
         LoginComponent,
-        HomeComponent
+        HomeComponent,
     ],
     imports: [
         BrowserModule,
@@ -31,7 +31,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MaterialModule,
         ReactiveFormsModule,
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    providers: [
+
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule { }
